@@ -1,16 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8"/>
+  <meta name="description" content="Portfolio of Javkhlan Rentsendorj"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Javkhlan Rentsendorj - Portfolio</title>
+
+  <!-- Google Font (Montserrat) -->
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+  />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/style.css"/>
+
+  <!-- Three.js -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.154.0/build/three.min.js"></script>
+  <!-- Optional: OrbitControls for camera movement -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.154.0/examples/js/controls/OrbitControls.js"></script>
 </head>
 <body>
-    <h1>BABU GOMO</h1><br>
-    <a href="https://gogo.mn">
-        Visit my website
-    </a>
+  <!-- Hero Section with Canvas for 3D animation -->
+  <header class="hero">
+    <canvas id="bgCanvas"></canvas>
+    <div class="hero-content scroll-reveal">
+      <h1>Javkhlan Rentsendorj</h1>
+      <h2>Web &amp; App Developer | CIO | Team Leader</h2>
+      <p class="subtitle">
+        15+ years of experience | Lecturer @ National University of Mongolia
+        <br />
+        Board Member @ Mongolian Web Dev Association | Gemini
+      </p>
+      <a href="#about" class="cta-btn">Learn More</a>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="section about">
+    <h2>About Me</h2>
+    <p>
+      Hello! I'm <strong>Javkhlan Rentsendorj</strong>, a professional web
+      designer and developer with <strong>15 years</strong> of experience. 
+      I've worked on modern web, mobile, and 3D projects, while also lecturing
+      at the <strong>National University of Mongolia</strong> and serving on the 
+      board of the <strong>Mongolian Web Developers Association</strong>.
+    </p>
+    <p>
+      As a <strong>serial entrepreneur</strong>, I've co-founded and led multiple 
+      successful startups, including <strong>yesh.mn</strong>, <strong>Octagon</strong>, 
+      and <strong>e-geree.mn</strong>. Currently, I'm the Co-Founder and 
+      <strong>CIO at Powered LLC</strong>, where I oversee project planning, IT 
+      infrastructure (AWS, Google Cloud), IT policy, strategic partnerships, and
+      pitch our products on major stages.
+    </p>
+    <p>
+      My startups have earned prestigious recognitions such as
+      <strong>ISO27001 certification</strong>, <strong>Best Startup in Digital
+      Night 2024</strong>, <strong>Winner Startup Challenge Mongolia 2024</strong>,
+      <strong>JICA Selected Startup 2024</strong>, and <strong>EBRD Selected Top 5
+      Mongolian Startup</strong>. These achievements showcase my pitching skill,
+      leadership, and dedication to building world-class solutions.
+    </p>
+    <p>
+      I'm an <strong>open-minded team leader</strong> with a passion for building
+      meaningful technology solutions that empower communities and businesses.
+    </p>
+  </section>
+
+  <!-- Expertise Section -->
+  <section class="section services">
+    <h2>Expertise</h2>
+    <div class="cards">
+      <div class="card scroll-reveal">
+        <h3>Front-End</h3>
+        <p>HTML, CSS, JavaScript, React, Next.js, Three.js</p>
+      </div>
+      <div class="card scroll-reveal">
+        <h3>Back-End</h3>
+        <p>Node.js, Express, MongoDB, REST APIs</p>
+      </div>
+      <div class="card scroll-reveal">
+        <h3>DevOps / Infra</h3>
+        <p>AWS, Google Cloud, Docker, IT Policy, Infrastructure Planning</p>
+      </div>
+      <div class="card scroll-reveal">
+        <h3>Mobile</h3>
+        <p>React Native, iOS / Android, Cross-Platform Apps</p>
+      </div>
+      <div class="card scroll-reveal">
+        <h3>Leadership</h3>
+        <p>Team Building, Pitching, Startup Growth, Partnerships</p>
+      </div>
+      <div class="card scroll-reveal">
+        <h3>3D / Animation</h3>
+        <p>Three.js, WebGL, Interactive Experiences</p>
+      </div>
+      <div class="card scroll-reveal">
+        <h3>Project Planning</h3>
+        <p>Requirements Gathering, Roadmaps, Resource Management</p>
+      </div>
+      <div class="card scroll-reveal">
+        <h3>Other Projects...</h3>
+        <p>Always exploring new tech and building prototypes</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="section projects">
+    <h2>Highlighted Projects &amp; Startups</h2>
+    <div class="project-list">
+      <div class="project-item scroll-reveal">
+        <h3>yesh.mn</h3>
+        <p>Revolutionary EdTech platform in Mongolia</p>
+      </div>
+      <div class="project-item scroll-reveal">
+        <h3>Octagon</h3>
+        <p>12th licensed crypto exchange in Mongolia</p>
+      </div>
+      <div class="project-item scroll-reveal">
+        <h3>e-geree.mn</h3>
+        <p>Streamlined digital contract solution</p>
+      </div>
+      <div class="project-item scroll-reveal">
+        <h3>ocurus.com</h3>
+        <p>AI-driven customer feedback &amp; analytics tool</p>
+      </div>
+      <div class="project-item scroll-reveal">
+        <h3>audit.mn</h3>
+        <p>Comprehensive auditing platform for businesses</p>
+      </div>
+      <div class="project-item scroll-reveal">
+        <h3>roadsafety.gov.mn</h3>
+        <p>National platform for enhancing road safety in Mongolia</p>
+      </div>
+      <div class="project-item scroll-reveal">
+        <h3>num.edu.mn</h3>
+        <p>National University of Mongolia main website</p>
+      </div>
+      <div class="project-item scroll-reveal">
+        <h3>site.num.edu.mn</h3>
+        <p>Sub-portal for departmental resources</p>
+      </div>
+      <div class="project-item scroll-reveal">
+        <h3>isu.edu.mn</h3>
+        <p>International School of Ulaanbaatar website</p>
+      </div>
+      <div class="project-item scroll-reveal">
+        <h3>abcp.mn</h3>
+        <p>Online printing &amp; design services</p>
+      </div>
+      <div class="project-item scroll-reveal">
+        <h3>fimo.mn</h3>
+        <p>Financial modeling &amp; consulting solutions</p>
+      </div>
+      <div class="project-item scroll-reveal">
+        <h3>...and many more</h3>
+        <p>Over 100+ projects built and counting!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Footer Section -->
+  <footer class="footer">
+    <p>Connect with me:</p>
+    <ul class="social-list">
+      <li><a href="mailto:your-email@example.com">Email</a></li>
+      <li>
+        <a
+          href="https://www.linkedin.com/in/javkhlan-rentsendorj-a6070a57/"
+          target="_blank"
+          rel="noopener"
+          >LinkedIn</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://www.facebook.com/javkhlanr/"
+          target="_blank"
+          rel="noopener"
+          >Facebook</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://github.com/janubis"
+          target="_blank"
+          rel="noopener"
+          >GitHub</a
+        >
+      </li>
+    </ul>
+    <p class="footer-credits">
+      &copy; 2025 Javkhlan Rentsendorj. All rights reserved.
+    </p>
+  </footer>
+
+  <!-- External JS -->
+  <script src="js/script.js"></script>
 </body>
 </html>

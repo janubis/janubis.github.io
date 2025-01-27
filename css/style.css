@@ -1,3 +1,235 @@
-h1 {
-    color: red;
+/* 
+  Basic Reset and Font:
+  Using Montserrat from Google Fonts for a clean, modern look.
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: #111;
+  overflow-x: hidden;
+  color: #fff;
+  /* 
+    Add a subtle gradient or something more vibrant:
+    Let's use a diagonal gradient from #111 to a deeper shade
+  */
+  background: linear-gradient(
+    to bottom right,
+    #111 0%,
+    #212121 100%
+  );
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#bgCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #000;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 1rem;
+  /* 
+    Adding a bright overlay with a different accent color
+    to make it more lively
+  */
+  background: rgba(255, 94, 94, 0.2);
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.hero-content h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cta-btn {
+  text-decoration: none;
+  color: #fff;
+  background: #ff5e5e;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #ff7676;
+}
+
+/* Section Styles */
+.section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 
+  Use a bright accent for section headings 
+  to create a more "colorful" vibe.
+*/
+.section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #ff5e5e;
+}
+
+/* About */
+.about p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 1rem;
+}
+
+/* Services/Expertise Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: #222;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(255, 94, 94, 0.4);
+}
+
+.card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  color: #ff5e5e;
+}
+
+/* Projects */
+.projects .project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-item {
+  background: #222;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(255, 94, 94, 0.4);
+}
+
+/* Footer */
+.footer {
+  background: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.footer p {
+  margin-bottom: 1rem;
+}
+
+.social-list {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+.social-list li {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+
+.social-list a {
+  color: #ff5e5e;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-credits {
+  font-size: 0.9rem;
+}
+
+/* 
+  Scroll Reveal:
+  We'll use the .scroll-reveal class plus a JS IntersectionObserver 
+  to fade/translate elements in on scroll.
+*/
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+.scroll-reveal.show {
+  opacity: 1;
+  transform: none;
+}
+
+/* Mouse Follower: A circle that trails the cursor */
+.mouse-follower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 94, 94, 0.7);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: background 0.3s ease;
+}
+
+.mouse-follower:hover {
+  background: rgba(255, 94, 94, 1);
 }
