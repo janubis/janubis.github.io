@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Contact Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 1rem;
+    }
+    .profile-container {
+      text-align: center;
+      max-width: 600px;
+      width: 100%;
+      background: #fff;
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    /* Profile Image */
+    .profile-image {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      border: 2px solid #eee;
+    }
+    /* Name */
+    .profile-name {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    /* Bio */
+    .profile-bio {
+      text-align: left;
+      line-height: 1.6;
+      margin: 1rem 0 2rem;
+      text-align: justify;
+    }
+    
+    /* Social Links */
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .social-links a {
+      text-decoration: none;
+      color: #555;
+      font-size: 1rem;
+      padding: 0.5rem 0.75rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      transition: background 0.3s, color 0.3s;
+    }
+    .social-links a:hover {
+      background: #555;
+      color: #fff;
+    }
+    /* Contact Button */
+    .contact-button a {
+      display: inline-block;
+      text-decoration: none;
+      background: #007bff;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    .contact-button a:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="profile-container">
+    <!-- Social Links at the top -->
+    <div class="social-links">
+      <a href="https://www.facebook.com/javkhlanr/" target="_blank">Facebook</a>
+      <a href="https://x.com/rjavkhlan" target="_blank">Twitter</a>
+      <a href="https://www.linkedin.com/in/javkhlan-rentsendorj-a6070a57/" target="_blank">LinkedIn</a>
+    </div>
+
+    <!-- Profile Image -->
+    <img
+      src="assets/profile-min.jpg"
+      alt="Profile Picture"
+      class="profile-image"
+    />
+
+    <!-- Full Name -->
+    <h1 class="profile-name">Javkhlan Rentsendorj</h1>
+
+    <!-- Short Bio -->
+    <div class="profile-bio">
+      <p>
+        a web designer/developer with 15 years of experience who has lectured at the National University of Mongolia and served on the Mongolian Web Developers Association board. As Co-Founder and CIO at Powered LLC, I oversee IT infrastructure, drive strategic partnerships, and pitch on major stages. 
+      </p>
+      
+    </div>
+
+    <!-- Contact Link/Button -->
+    <div class="contact-button">
+      <a href="assets/rjavkhlan.vcf">+ Add to Phone Contact</a>
+    </div>
+  </div>
+
+</body>
+</html>
