@@ -58,7 +58,11 @@ body {
     Adding a bright overlay with a different accent color
     to make it more lively
   */
-  background: rgba(255, 94, 94, 0.2);
+  background: linear-gradient(
+    to bottom right,
+    #11111173 0%,
+    #21212168 100%
+  );
 }
 
 .hero-content h1 {
