@@ -1,126 +1,373 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>My Contact Page</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: Arial, sans-serif;
-      background: #f9f9f9;
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      padding: 1rem;
-    }
-    .profile-container {
-      text-align: center;
-      max-width: 600px;
-      width: 100%;
-      background: #fff;
-      border-radius: 8px;
-      padding: 2rem;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    /* Profile Image */
-    .profile-image {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 1rem;
-      border: 2px solid #eee;
-    }
-    /* Name */
-    .profile-name {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-    }
-    /* Bio */
-    .profile-bio {
-      text-align: left;
-      line-height: 1.6;
-      margin: 1rem 0 2rem;
-      text-align: justify;
-    }
-    
-    /* Social Links */
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-    }
-    .social-links a {
-      text-decoration: none;
-      color: #555;
-      font-size: 1rem;
-      padding: 0.5rem 0.75rem;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      transition: background 0.3s, color 0.3s;
-    }
-    .social-links a:hover {
-      background: #555;
-      color: #fff;
-    }
-    /* Contact Button */
-    .contact-button a {
-      display: inline-block;
-      text-decoration: none;
-      background: #007bff;
-      color: #fff;
-      padding: 0.75rem 1.5rem;
-      border-radius: 4px;
-      transition: background 0.3s;
-    }
-    .contact-button a:hover {
-      background: #0056b3;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="profile-container">
-    <!-- Social Links at the top -->
-    <div class="social-links">
-        
-        <a href="http://t.me/rjavkhlan" target="_blank">Telegram</a>
-        <a href="https://www.facebook.com/javkhlanr/" target="_blank">Facebook</a>
-        <a href="https://x.com/rjavkhlan" target="_blank">Twitter</a>
-        <a href="https://www.linkedin.com/in/javkhlan-rentsendorj-a6070a57/" target="_blank">LinkedIn</a>
-    </div>
-
-    <!-- Profile Image -->
-    <img
-      src="assets/profile-min.jpg"
-      alt="Profile Picture"
-      class="profile-image"
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Contact details for Javkhlan Rentsendorj — researcher, university lecturer, and technology entrepreneur."
     />
+    <meta name="theme-color" content="#070b14" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <title>Contact — Javkhlan Rentsendorj</title>
+    <style>
+      :root {
+        --ink: #080d16;
+        --paper: #f6f4ed;
+        --muted: #9299a4;
+        --cyan: #50e3e6;
+        --amber: #ffb957;
+        --display: "Space Grotesk", sans-serif;
+        --body: "Manrope", sans-serif;
+      }
 
-    <!-- Full Name -->
-    <h1 class="profile-name">Javkhlan Rentsendorj</h1>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
 
-    <!-- Short Bio -->
-    <div class="profile-bio">
-      <p>
-        a web designer/developer with 15 years of experience who has lectured at the National University of Mongolia and served on the Mongolian Web Developers Association board. As Co-Founder and CIO at Powered LLC, I oversee IT infrastructure, drive strategic partnerships, and pitch on major stages. 
-      </p>
-      
-    </div>
+      body {
+        display: grid;
+        min-width: 320px;
+        min-height: 100svh;
+        margin: 0;
+        padding: clamp(1rem, 4vw, 4rem);
+        place-items: center;
+        overflow-x: hidden;
+        background:
+          radial-gradient(circle at 78% 28%, rgba(80, 227, 230, 0.16), transparent 25%),
+          radial-gradient(circle at 20% 85%, rgba(255, 185, 87, 0.1), transparent 25%),
+          var(--ink);
+        color: var(--paper);
+        font-family: var(--body);
+      }
 
-    <!-- Contact Link/Button -->
-    <div class="contact-button">
-      <a href="assets/rjavkhlan.vcf">+ Add to Phone Contact</a>
-    </div>
-  </div>
+      body::before {
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+        background-size: 5rem 5rem;
+        content: "";
+        mask-image: radial-gradient(circle at center, black, transparent 85%);
+      }
 
-</body>
+      ::selection {
+        background: var(--cyan);
+        color: var(--ink);
+      }
+
+      .back {
+        position: fixed;
+        top: clamp(1.2rem, 3vw, 2rem);
+        left: clamp(1.2rem, 4vw, 4rem);
+        z-index: 2;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.7rem;
+        color: rgba(255, 255, 255, 0.6);
+        font-family: var(--display);
+        font-size: 0.7rem;
+        letter-spacing: 0.06em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .back span {
+        color: var(--cyan);
+        transition: transform 0.3s ease;
+      }
+
+      .back:hover span {
+        transform: translateX(-0.3rem);
+      }
+
+      .card {
+        position: relative;
+        display: grid;
+        width: min(100%, 66rem);
+        min-height: 37rem;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.13);
+        background: rgba(14, 21, 33, 0.8);
+        box-shadow: 0 3rem 8rem rgba(0, 0, 0, 0.45);
+        grid-template-columns: 0.76fr 1.24fr;
+        backdrop-filter: blur(22px);
+        animation: arrive 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+      }
+
+      @keyframes arrive {
+        from {
+          opacity: 0;
+          transform: translateY(2.5rem) scale(0.98);
+        }
+      }
+
+      .portrait {
+        position: relative;
+        min-height: 37rem;
+        overflow: hidden;
+      }
+
+      .portrait img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 18%;
+        filter: saturate(0.7) contrast(1.07);
+        transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .card:hover .portrait img {
+        transform: scale(1.025);
+      }
+
+      .portrait::after {
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(to top, rgba(8, 13, 22, 0.56), transparent 40%),
+          linear-gradient(135deg, rgba(80, 227, 230, 0.13), transparent 50%);
+        content: "";
+      }
+
+      .portrait__label {
+        position: absolute;
+        right: 1.2rem;
+        bottom: 1.2rem;
+        left: 1.2rem;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: rgba(255, 255, 255, 0.6);
+        font-family: var(--display);
+        font-size: 0.55rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .details {
+        display: flex;
+        padding: clamp(2rem, 5vw, 5rem);
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        color: var(--cyan);
+        font-family: var(--display);
+        font-size: 0.6rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--cyan);
+        box-shadow: 0 0 0 0 rgba(80, 227, 230, 0.4);
+        content: "";
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        70% {
+          box-shadow: 0 0 0 8px rgba(80, 227, 230, 0);
+        }
+      }
+
+      h1 {
+        margin: 1.5rem 0 0.7rem;
+        font-family: var(--display);
+        font-size: clamp(2.8rem, 6vw, 5.5rem);
+        font-weight: 600;
+        letter-spacing: -0.075em;
+        line-height: 0.92;
+      }
+
+      h1 span {
+        color: var(--cyan);
+      }
+
+      .role {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.82rem;
+        line-height: 1.7;
+      }
+
+      .bio {
+        max-width: 32rem;
+        margin: 2rem 0;
+        color: rgba(255, 255, 255, 0.58);
+        font-size: 0.87rem;
+        line-height: 1.85;
+      }
+
+      .links {
+        display: grid;
+        margin: 0 0 2rem;
+        padding: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.13);
+        grid-template-columns: 1fr 1fr;
+        list-style: none;
+      }
+
+      .links li:nth-child(odd) {
+        margin-right: 1rem;
+      }
+
+      .links a {
+        display: flex;
+        padding: 0.75rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+        color: rgba(255, 255, 255, 0.7);
+        font-family: var(--display);
+        font-size: 0.66rem;
+        text-decoration: none;
+        transition: color 0.25s ease;
+      }
+
+      .links a span {
+        margin-left: auto;
+        color: var(--cyan);
+      }
+
+      .links a:hover {
+        color: white;
+      }
+
+      .vcard {
+        display: inline-flex;
+        min-height: 3.7rem;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        padding: 0.4rem 0.45rem 0.4rem 1.3rem;
+        background: var(--cyan);
+        color: var(--ink);
+        font-family: var(--display);
+        font-size: 0.73rem;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .vcard span {
+        display: grid;
+        width: 2.9rem;
+        height: 2.9rem;
+        place-items: center;
+        background: var(--ink);
+        color: white;
+        font-size: 1.1rem;
+        transition: transform 0.35s ease;
+      }
+
+      .vcard:hover span {
+        transform: rotate(90deg);
+      }
+
+      @media (max-width: 760px) {
+        body {
+          display: block;
+          padding-top: 5.5rem;
+        }
+
+        .card {
+          grid-template-columns: 1fr;
+        }
+
+        .portrait {
+          min-height: 30rem;
+        }
+
+        .details {
+          min-height: 34rem;
+        }
+      }
+
+      @media (max-width: 430px) {
+        .portrait {
+          min-height: 25rem;
+        }
+
+        .details {
+          padding: 1.5rem;
+        }
+
+        .links {
+          grid-template-columns: 1fr;
+        }
+
+        .links li:nth-child(odd) {
+          margin-right: 0;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="back" href="index.html"><span>←</span> Back to portfolio</a>
+    <main class="card">
+      <div class="portrait">
+        <img
+          src="assets/profile-min.jpg"
+          alt="Portrait of Javkhlan Rentsendorj"
+          width="1365"
+          height="2048"
+        />
+        <div class="portrait__label">
+          <span>Ulaanbaatar</span>
+          <span>47.9° N / 106.9° E</span>
+        </div>
+      </div>
+      <div class="details">
+        <div>
+          <div class="eyebrow">Available for collaboration</div>
+          <h1>Javkhlan<br />Rentsendorj<span>.</span></h1>
+          <p class="role">Researcher · University Lecturer · Technology Entrepreneur</p>
+          <p class="bio">
+            I build at the intersection of technology, education, and
+            entrepreneurship — turning ambitious ideas into useful platforms,
+            capable teams, and lasting impact.
+          </p>
+        </div>
+        <div>
+          <ul class="links">
+            <li><a href="mailto:r.javkhlan@num.edu.mn">Email <span>↗</span></a></li>
+            <li><a href="https://t.me/rjavkhlan" target="_blank" rel="noopener noreferrer">Telegram <span>↗</span></a></li>
+            <li><a href="https://www.linkedin.com/in/javkhlan-rentsendorj-a6070a57/" target="_blank" rel="noopener noreferrer">LinkedIn <span>↗</span></a></li>
+            <li><a href="https://github.com/janubis" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a></li>
+          </ul>
+          <a class="vcard" href="assets/rjavkhlan.vcf">
+            Add to contacts
+            <span>+</span>
+          </a>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>

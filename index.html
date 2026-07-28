@@ -1,203 +1,625 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="description" content="Portfolio of Javkhlan Rentsendorj"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Javkhlan Rentsendorj - Portfolio</title>
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="The portfolio of Javkhlan Rentsendorj — researcher, university lecturer, technology leader, and serial entrepreneur based in Mongolia."
+    />
+    <meta name="theme-color" content="#070b14" />
+    <meta name="color-scheme" content="dark" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://janubis.github.io/" />
+    <meta property="og:title" content="Javkhlan Rentsendorj — Researcher, Lecturer & Venture Builder" />
+    <meta
+      property="og:description"
+      content="Building at the intersection of research, education, and entrepreneurship."
+    />
+    <meta property="og:image" content="https://janubis.github.io/assets/og-card.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Javkhlan Rentsendorj" />
+    <meta
+      name="twitter:description"
+      content="Researcher. Lecturer. Venture builder."
+    />
+    <meta name="twitter:image" content="https://janubis.github.io/assets/og-card.png" />
+    <link rel="canonical" href="https://janubis.github.io/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Javkhlan Rentsendorj — Researcher, Lecturer & Venture Builder</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Google Font (Montserrat) -->
-  <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
-  />
-
-  <!-- External CSS -->
-  <link rel="stylesheet" href="css/style.css"/>
-
-  <!-- Three.js -->
-  <script src="https://cdn.jsdelivr.net/npm/three@0.154.0/build/three.min.js"></script>
-  <!-- Optional: OrbitControls for camera movement -->
-  <script src="https://cdn.jsdelivr.net/npm/three@0.154.0/examples/js/controls/OrbitControls.js"></script>
-</head>
-<body>
-  <!-- Hero Section with Canvas for 3D animation -->
-  <header class="hero">
-    <canvas id="bgCanvas"></canvas>
-    <div class="hero-content scroll-reveal">
-      <h1>Javkhlan Rentsendorj</h1>
-      <h2>Web &amp; App Developer | CIO | Team Leader</h2>
-      <p class="subtitle">
-        15+ years of experience | Lecturer @ National University of Mongolia
-        <br />
-        Board Member @ Mongolian Web Dev Association | Gemini
-      </p>
-      <a href="contact.html" class="cta-btn">Contact Info</a>
+    <div class="loader" aria-hidden="true">
+      <div class="loader__mark">JR<span>.</span></div>
+      <div class="loader__track"><span></span></div>
+      <p>Connecting ideas</p>
     </div>
-  </header>
 
-  <!-- About Section -->
-  <section id="about" class="section about">
-    <h2>About Me</h2>
-    <p>
-      Hello! I'm <strong>Javkhlan Rentsendorj</strong>, a professional web
-      designer and developer with <strong>15 years</strong> of experience. 
-      I've worked on modern web, mobile, and 3D projects, while also lecturing
-      at the <strong>National University of Mongolia</strong> and serving on the 
-      board of the <strong>Mongolian Web Developers Association</strong>.
-    </p>
-    <p>
-      As a <strong>serial entrepreneur</strong>, I've co-founded and led multiple 
-      successful startups, including <strong>yesh.mn</strong>, <strong>Octagon</strong>, 
-      and <strong>e-geree.mn</strong>. Currently, I'm the Co-Founder and 
-      <strong>CIO at Powered LLC</strong>, where I oversee project planning, IT 
-      infrastructure (AWS, Google Cloud), IT policy, strategic partnerships, and
-      pitch our products on major stages.
-    </p>
-    <p>
-      My startups have earned prestigious recognitions such as
-      <strong>ISO27001 certification</strong>, <strong>Best Startup in Digital
-      Night 2024</strong>, <strong>Winner Startup Challenge Mongolia 2024</strong>,
-      <strong>JICA Selected Startup 2024</strong>, and <strong>EBRD Selected Top 5
-      Mongolian Startup</strong>. These achievements showcase my pitching skill,
-      leadership, and dedication to building world-class solutions.
-    </p>
-    <p>
-      I'm an <strong>open-minded team leader</strong> with a passion for building
-      meaningful technology solutions that empower communities and businesses.
-    </p>
-  </section>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
 
-  <!-- Expertise Section -->
-  <section class="section services">
-    <h2>Expertise</h2>
-    <div class="cards">
-      <div class="card scroll-reveal">
-        <h3>Front-End</h3>
-        <p>HTML, CSS, JavaScript, React, Next.js, Three.js</p>
-      </div>
-      <div class="card scroll-reveal">
-        <h3>Back-End</h3>
-        <p>Node.js, Express, MongoDB, REST APIs</p>
-      </div>
-      <div class="card scroll-reveal">
-        <h3>DevOps / Infra</h3>
-        <p>AWS, Google Cloud, Docker, IT Policy, Infrastructure Planning</p>
-      </div>
-      <div class="card scroll-reveal">
-        <h3>Mobile</h3>
-        <p>React Native, iOS / Android, Cross-Platform Apps</p>
-      </div>
-      <div class="card scroll-reveal">
-        <h3>Leadership</h3>
-        <p>Team Building, Pitching, Startup Growth, Partnerships</p>
-      </div>
-      <div class="card scroll-reveal">
-        <h3>3D / Animation</h3>
-        <p>Three.js, WebGL, Interactive Experiences</p>
-      </div>
-      <div class="card scroll-reveal">
-        <h3>Project Planning</h3>
-        <p>Requirements Gathering, Roadmaps, Resource Management</p>
-      </div>
-      <div class="card scroll-reveal">
-        <h3>Other Projects...</h3>
-        <p>Always exploring new tech and building prototypes</p>
-      </div>
-    </div>
-  </section>
+    <header class="site-header" data-header>
+      <a class="brand magnetic" href="#top" aria-label="Javkhlan Rentsendorj, home">
+        <span class="brand__mark">JR<span>.</span></span>
+        <span class="brand__text">Javkhlan<br />Rentsendorj</span>
+      </a>
 
-  <!-- Projects Section -->
-  <section class="section projects">
-    <h2>Highlighted Projects &amp; Startups</h2>
-    <div class="project-list">
-      <div class="project-item scroll-reveal">
-        <h3>yesh.mn</h3>
-        <p>Revolutionary EdTech platform in Mongolia</p>
-      </div>
-      <div class="project-item scroll-reveal">
-        <h3>Octagon</h3>
-        <p>12th licensed crypto exchange in Mongolia</p>
-      </div>
-      <div class="project-item scroll-reveal">
-        <h3>e-geree.mn</h3>
-        <p>Streamlined digital contract solution</p>
-      </div>
-      <div class="project-item scroll-reveal">
-        <h3>ocurus.com</h3>
-        <p>AI-driven customer feedback &amp; analytics tool</p>
-      </div>
-      <div class="project-item scroll-reveal">
-        <h3>audit.mn</h3>
-        <p>Comprehensive auditing platform for businesses</p>
-      </div>
-      <div class="project-item scroll-reveal">
-        <h3>roadsafety.gov.mn</h3>
-        <p>National platform for enhancing road safety in Mongolia</p>
-      </div>
-      <div class="project-item scroll-reveal">
-        <h3>num.edu.mn</h3>
-        <p>National University of Mongolia main website</p>
-      </div>
-      <div class="project-item scroll-reveal">
-        <h3>site.num.edu.mn</h3>
-        <p>Sub-portal for departmental resources</p>
-      </div>
-      <div class="project-item scroll-reveal">
-        <h3>isu.edu.mn</h3>
-        <p>International School of Ulaanbaatar website</p>
-      </div>
-      <div class="project-item scroll-reveal">
-        <h3>abcp.mn</h3>
-        <p>Online printing &amp; design services</p>
-      </div>
-      <div class="project-item scroll-reveal">
-        <h3>fimo.mn</h3>
-        <p>Financial modeling &amp; consulting solutions</p>
-      </div>
-      <div class="project-item scroll-reveal">
-        <h3>...and many more</h3>
-        <p>Over 100+ projects built and counting!</p>
-      </div>
-    </div>
-  </section>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+        aria-label="Open navigation"
+      >
+        <span></span>
+        <span></span>
+      </button>
 
-  <!-- Contact / Footer Section -->
-  <footer class="footer">
-    <p>Connect with me:</p>
-    <ul class="social-list">
-      <li><a href="mailto:your-email@example.com">Email</a></li>
-      <li>
-        <a
-          href="https://www.linkedin.com/in/javkhlan-rentsendorj-a6070a57/"
-          target="_blank"
-          rel="noopener"
-          >LinkedIn</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://www.facebook.com/javkhlanr/"
-          target="_blank"
-          rel="noopener"
-          >Facebook</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/janubis"
-          target="_blank"
-          rel="noopener"
-          >GitHub</a
-        >
-      </li>
-    </ul>
-    <p class="footer-credits">
-      &copy; 2025 Javkhlan Rentsendorj. All rights reserved.
-    </p>
-  </footer>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="#profile">Profile</a>
+        <a href="#research">Research</a>
+        <a href="#ventures">Ventures</a>
+        <a href="#work">Work</a>
+        <a class="nav-cta magnetic" href="#contact">Let’s talk <span>↗</span></a>
+      </nav>
+    </header>
 
-  <!-- External JS -->
-  <script src="js/script.js"></script>
-</body>
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <canvas id="hero-canvas" aria-hidden="true"></canvas>
+        <div class="hero__aurora hero__aurora--one" aria-hidden="true"></div>
+        <div class="hero__aurora hero__aurora--two" aria-hidden="true"></div>
+        <div class="hero__grid" aria-hidden="true"></div>
+
+        <div class="hero__content">
+          <div class="hero__copy">
+            <div class="eyebrow hero-reveal">
+              <span class="status-dot"></span>
+              Ulaanbaatar, Mongolia
+              <span class="eyebrow__divider"></span>
+              Open to global collaboration
+            </div>
+
+            <h1 id="hero-title" class="hero-title" aria-label="Researcher. Lecturer. Venture builder.">
+              <span class="hero-title__line">
+                <span class="hero-title__inner">Researcher<span class="accent-dot">.</span></span>
+              </span>
+              <span class="hero-title__line hero-title__line--outline">
+                <span class="hero-title__inner">Lecturer<span class="accent-dot">.</span></span>
+              </span>
+              <span class="hero-title__line hero-title__line--indent">
+                <span class="hero-title__inner">Venture builder<span class="accent-dot">.</span></span>
+              </span>
+            </h1>
+
+            <div class="hero__bottom hero-reveal">
+              <p class="hero__lede">
+                I turn complex ideas into useful systems — moving between the
+                research lab, the lecture hall, and the startup floor.
+              </p>
+              <div class="hero__actions">
+                <a class="button button--primary magnetic" href="#ventures">
+                  Explore my work
+                  <span class="button__icon">↘</span>
+                </a>
+                <a class="text-link magnetic" href="#research">
+                  Current research
+                  <span>→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero__portrait-wrap hero-reveal" data-parallax>
+            <div class="portrait-orbit portrait-orbit--outer" aria-hidden="true"></div>
+            <div class="portrait-orbit portrait-orbit--inner" aria-hidden="true"></div>
+            <div class="portrait-card tilt-card">
+              <div class="portrait-card__image">
+                <img
+                  src="assets/profile-min.jpg"
+                  alt="Portrait of Javkhlan Rentsendorj"
+                  width="1365"
+                  height="2048"
+                  fetchpriority="high"
+                />
+                <div class="portrait-card__wash" aria-hidden="true"></div>
+              </div>
+              <div class="portrait-card__caption">
+                <span>Javkhlan Rentsendorj</span>
+                <span>01 / 04</span>
+              </div>
+            </div>
+            <span class="orbit-label orbit-label--one">Science</span>
+            <span class="orbit-label orbit-label--two">Systems</span>
+            <span class="orbit-label orbit-label--three">Startups</span>
+          </div>
+        </div>
+
+        <div class="hero__rail" aria-hidden="true">
+          <span>Scroll to explore</span>
+          <i></i>
+        </div>
+      </section>
+
+      <div class="ticker" aria-label="Areas of expertise">
+        <div class="ticker__track">
+          <div class="ticker__group">
+            <span>360° Imaging</span><i></i>
+            <span>Technology Strategy</span><i></i>
+            <span>University Teaching</span><i></i>
+            <span>Digital Ventures</span><i></i>
+            <span>Cloud & Infrastructure</span><i></i>
+            <span>Product Leadership</span><i></i>
+          </div>
+          <div class="ticker__group" aria-hidden="true">
+            <span>360° Imaging</span><i></i>
+            <span>Technology Strategy</span><i></i>
+            <span>University Teaching</span><i></i>
+            <span>Digital Ventures</span><i></i>
+            <span>Cloud & Infrastructure</span><i></i>
+            <span>Product Leadership</span><i></i>
+          </div>
+        </div>
+      </div>
+
+      <section class="section profile" id="profile">
+        <div class="section__label reveal">
+          <span>01</span>
+          <p>Profile</p>
+        </div>
+
+        <div class="profile__intro">
+          <p class="statement reveal">
+            Building technology is only half the work.
+            <span class="text-muted">The other half is creating the knowledge, teams, and momentum that make it matter.</span>
+          </p>
+          <div class="profile__body reveal">
+            <p>
+              I’m <strong>Javkhlan Rentsendorj</strong>, a Mongolian technology
+              leader with more than 15 years of experience across software,
+              education, and venture building.
+            </p>
+            <p>
+              Today, I’m a <strong>Co-Founder and CIO at Powered LLC</strong>,
+              a lecturer at the <strong>National University of Mongolia</strong>,
+              and a doctoral researcher exploring the future of immersive,
+              gigapixel visual experiences.
+            </p>
+          </div>
+        </div>
+
+        <div class="metrics">
+          <article class="metric reveal tilt-card">
+            <span class="metric__index">A</span>
+            <strong><span data-counter="15">0</span>+</strong>
+            <p>Years building digital products and technology teams</p>
+          </article>
+          <article class="metric reveal tilt-card">
+            <span class="metric__index">B</span>
+            <strong><span data-counter="100">0</span>+</strong>
+            <p>Web, mobile, platform, and infrastructure projects</p>
+          </article>
+          <article class="metric reveal tilt-card">
+            <span class="metric__index">C</span>
+            <strong><span data-counter="3">0</span></strong>
+            <p>Worlds connected: research, education, and enterprise</p>
+          </article>
+        </div>
+
+        <div class="role-grid">
+          <article class="role-card reveal tilt-card">
+            <span class="role-card__number">01</span>
+            <div>
+              <p class="role-card__eyebrow">Technology leadership</p>
+              <h3>Co-Founder & CIO</h3>
+              <p>
+                Guiding product architecture, cloud infrastructure, IT policy,
+                partnerships, and the path from prototype to scalable platform.
+              </p>
+            </div>
+            <span class="role-card__company">Powered LLC</span>
+          </article>
+
+          <article class="role-card reveal tilt-card">
+            <span class="role-card__number">02</span>
+            <div>
+              <p class="role-card__eyebrow">Higher education</p>
+              <h3>University Lecturer</h3>
+              <p>
+                Helping the next generation connect strong engineering
+                fundamentals with curiosity, teamwork, and real-world delivery.
+              </p>
+            </div>
+            <span class="role-card__company">National University of Mongolia</span>
+          </article>
+
+          <article class="role-card reveal tilt-card">
+            <span class="role-card__number">03</span>
+            <div>
+              <p class="role-card__eyebrow">Ecosystem building</p>
+              <h3>Founder & Board Member</h3>
+              <p>
+                Creating ventures and contributing to Mongolia’s technology
+                community through leadership, mentorship, and collaboration.
+              </p>
+            </div>
+            <span class="role-card__company">Multiple ventures & MWDA</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section research" id="research">
+        <div class="section__label section__label--light reveal">
+          <span>02</span>
+          <p>Research</p>
+        </div>
+
+        <div class="research__header">
+          <div>
+            <p class="kicker reveal">PhD research · Work in progress</p>
+            <h2 class="section-title reveal">
+              Rethinking how we see
+              <span>gigapixel 360° worlds.</span>
+            </h2>
+          </div>
+          <p class="research__summary reveal">
+            My current research investigates how projection geometry, viewport
+            selection, multiresolution sampling, and delivery can be optimized
+            together for responsive, high-fidelity exploration of massive
+            spherical images.
+          </p>
+        </div>
+
+        <div class="research__feature reveal">
+          <div class="research-orbit" aria-hidden="true">
+            <div class="research-orbit__glow"></div>
+            <div class="research-orbit__sphere">
+              <span class="longitude longitude--one"></span>
+              <span class="longitude longitude--two"></span>
+              <span class="latitude latitude--one"></span>
+              <span class="latitude latitude--two"></span>
+              <span class="research-orbit__core">360°</span>
+            </div>
+            <span class="research-node research-node--one">QoE</span>
+            <span class="research-node research-node--two">LoD</span>
+            <span class="research-node research-node--three">GPU</span>
+            <span class="research-node research-node--four">Tiles</span>
+          </div>
+
+          <div class="research__content">
+            <div class="research__title-row">
+              <span class="status-pill">Active research</span>
+              <span class="research__code">DAPVS / 2026</span>
+            </div>
+            <h3>Distortion-Aware Projection & Viewport Selection</h3>
+            <p>
+              A continuity-aware framework for interactive gigapixel 360°
+              imagery. The work asks whether representation, orientation,
+              projection, level of detail, and tile delivery should be selected
+              as one coordinated decision instead of isolated steps.
+            </p>
+            <div class="research-pipeline">
+              <span>Representation</span>
+              <i>→</i>
+              <span>Orientation</span>
+              <i>→</i>
+              <span>Viewport</span>
+              <i>→</i>
+              <span>Delivery</span>
+            </div>
+            <ul class="research-tags" aria-label="Research topics">
+              <li>Omnidirectional imaging</li>
+              <li>Projection geometry</li>
+              <li>Quality of experience</li>
+              <li>Progressive delivery</li>
+              <li>WebGL rendering</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="research__principles">
+          <article class="principle reveal">
+            <span>01</span>
+            <h3>Scientific rigor</h3>
+            <p>
+              Grounding decisions in international literature, reproducible
+              engineering, and clearly separated experimental claims.
+            </p>
+          </article>
+          <article class="principle reveal">
+            <span>02</span>
+            <h3>Human experience</h3>
+            <p>
+              Balancing geometric fidelity and perceptual quality with the
+              latency, bandwidth, and stability people actually feel.
+            </p>
+          </article>
+          <article class="principle reveal">
+            <span>03</span>
+            <h3>Real-world scale</h3>
+            <p>
+              Using large visual environments — including a gigapixel view of
+              Ulaanbaatar — to keep the research connected to practice.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section ventures" id="ventures">
+        <div class="section__label reveal">
+          <span>03</span>
+          <p>Ventures</p>
+        </div>
+
+        <div class="ventures__heading">
+          <h2 class="section-title reveal">
+            From zero to
+            <span>something people use.</span>
+          </h2>
+          <p class="reveal">
+            I’ve co-founded and led ventures across digital contracts,
+            education, fintech, and enterprise software — aligning the product,
+            technology, and story behind each one.
+          </p>
+        </div>
+
+        <div class="venture-list">
+          <a class="venture reveal" href="https://powered.mn" target="_blank" rel="noopener noreferrer">
+            <span class="venture__number">01</span>
+            <div class="venture__identity">
+              <h3>Powered</h3>
+              <p>Technology & digital product company</p>
+            </div>
+            <ul class="venture__tags" aria-label="Powered focus areas">
+              <li>Co-Founder</li>
+              <li>CIO</li>
+              <li>Technology strategy</li>
+            </ul>
+            <span class="venture__arrow">↗</span>
+          </a>
+
+          <a class="venture reveal" href="https://e-geree.mn" target="_blank" rel="noopener noreferrer">
+            <span class="venture__number">02</span>
+            <div class="venture__identity">
+              <h3>e-Geree</h3>
+              <p>Blockchain document & digital contract platform</p>
+            </div>
+            <ul class="venture__tags" aria-label="e-Geree focus areas">
+              <li>Co-Founder</li>
+              <li>Trust technology</li>
+              <li>Enterprise</li>
+            </ul>
+            <span class="venture__arrow">↗</span>
+          </a>
+
+          <a class="venture reveal" href="https://yesh.mn" target="_blank" rel="noopener noreferrer">
+            <span class="venture__number">03</span>
+            <div class="venture__identity">
+              <h3>Yesh</h3>
+              <p>Learning and EdTech platform</p>
+            </div>
+            <ul class="venture__tags" aria-label="Yesh focus areas">
+              <li>Co-Founder</li>
+              <li>Education</li>
+              <li>Digital learning</li>
+            </ul>
+            <span class="venture__arrow">↗</span>
+          </a>
+
+          <article class="venture reveal">
+            <span class="venture__number">04</span>
+            <div class="venture__identity">
+              <h3>Octagon</h3>
+              <p>Licensed digital asset exchange</p>
+            </div>
+            <ul class="venture__tags" aria-label="Octagon focus areas">
+              <li>Co-Founder</li>
+              <li>Fintech</li>
+              <li>Digital assets</li>
+            </ul>
+            <span class="venture__arrow">◇</span>
+          </article>
+        </div>
+
+        <div class="recognition reveal">
+          <div class="recognition__intro">
+            <span>Selected recognition</span>
+            <h3>Teams built to compete.</h3>
+          </div>
+          <ul>
+            <li><span>2024</span> Startup Challenge Mongolia — National Winner</li>
+            <li><span>2024</span> Digital Night — Top 10 Digital Project</li>
+            <li><span>JICA</span> MonJa Accelerator — Selected Startup</li>
+            <li><span>ISO</span> 27001:2013 implementation</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section work" id="work">
+        <div class="section__label reveal">
+          <span>04</span>
+          <p>Selected work</p>
+        </div>
+
+        <div class="work__heading">
+          <h2 class="section-title reveal">
+            Platforms with
+            <span>public impact.</span>
+          </h2>
+          <p class="reveal">
+            Selected work across government, education, enterprise, and emerging
+            technology. Every project taught me something about systems, people,
+            and scale.
+          </p>
+        </div>
+
+        <div class="project-grid">
+          <a class="project project--feature reveal tilt-card" href="https://roadsafety.gov.mn" target="_blank" rel="noopener noreferrer">
+            <div class="project__top">
+              <span class="project__type">National platform</span>
+              <span class="project__arrow">↗</span>
+            </div>
+            <div class="project__visual project__visual--roads" aria-hidden="true">
+              <span class="road-line road-line--one"></span>
+              <span class="road-line road-line--two"></span>
+              <span class="road-pulse"></span>
+            </div>
+            <div>
+              <h3>Road Safety Mongolia</h3>
+              <p>A national digital platform supporting safer roads and public information.</p>
+            </div>
+          </a>
+
+          <a class="project reveal tilt-card" href="https://num.edu.mn" target="_blank" rel="noopener noreferrer">
+            <div class="project__top">
+              <span class="project__type">Higher education</span>
+              <span class="project__arrow">↗</span>
+            </div>
+            <div class="project__monogram" aria-hidden="true">NUM</div>
+            <div>
+              <h3>National University of Mongolia</h3>
+              <p>Main university web platform and institutional digital presence.</p>
+            </div>
+          </a>
+
+          <a class="project reveal tilt-card" href="https://ocurus.com" target="_blank" rel="noopener noreferrer">
+            <div class="project__top">
+              <span class="project__type">AI & analytics</span>
+              <span class="project__arrow">↗</span>
+            </div>
+            <div class="project__monogram project__monogram--cyan" aria-hidden="true">VT</div>
+            <div>
+              <h3>VToura / Ocurus</h3>
+              <p>A cloud platform for creating and publishing immersive 360° virtual tours.</p>
+            </div>
+          </a>
+
+          <a class="project reveal tilt-card" href="https://audit.mn" target="_blank" rel="noopener noreferrer">
+            <div class="project__top">
+              <span class="project__type">Enterprise</span>
+              <span class="project__arrow">↗</span>
+            </div>
+            <div class="project__monogram project__monogram--warm" aria-hidden="true">AU</div>
+            <div>
+              <h3>Audit.mn</h3>
+              <p>Digital tools that support structured auditing workflows.</p>
+            </div>
+          </a>
+
+          <article class="project project--quote reveal">
+            <p>
+              “The best systems don’t just work. They make the next good
+              decision easier.”
+            </p>
+            <span>Javkhlan Rentsendorj</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section capabilities">
+        <div class="section__label reveal">
+          <span>05</span>
+          <p>Capabilities</p>
+        </div>
+
+        <div class="capabilities__grid">
+          <h2 class="section-title reveal">
+            Broad enough to connect.
+            <span>Deep enough to deliver.</span>
+          </h2>
+          <div class="capability-list">
+            <article class="capability reveal">
+              <span>01</span>
+              <div>
+                <h3>Engineering</h3>
+                <p>Web platforms, mobile products, APIs, WebGL, React, Next.js, Node.js</p>
+              </div>
+            </article>
+            <article class="capability reveal">
+              <span>02</span>
+              <div>
+                <h3>Infrastructure</h3>
+                <p>AWS, Google Cloud, Docker, architecture, security, and IT policy</p>
+              </div>
+            </article>
+            <article class="capability reveal">
+              <span>03</span>
+              <div>
+                <h3>Venture building</h3>
+                <p>Product strategy, teams, partnerships, roadmaps, pitching, and growth</p>
+              </div>
+            </article>
+            <article class="capability reveal">
+              <span>04</span>
+              <div>
+                <h3>Research & teaching</h3>
+                <p>360° imaging, experimental systems, curriculum, mentoring, and technical communication</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="contact__orb contact__orb--one" aria-hidden="true"></div>
+        <div class="contact__orb contact__orb--two" aria-hidden="true"></div>
+        <div class="contact__content">
+          <div class="section__label section__label--light reveal">
+            <span>06</span>
+            <p>Contact</p>
+          </div>
+          <p class="kicker reveal">Have an ambitious idea?</p>
+          <h2 class="reveal">
+            Let’s build what
+            <span>comes next.</span>
+          </h2>
+          <div class="contact__actions reveal">
+            <a class="button button--light magnetic" href="mailto:r.javkhlan@num.edu.mn">
+              Start a conversation
+              <span class="button__icon">↗</span>
+            </a>
+            <button
+              class="copy-email magnetic"
+              type="button"
+              data-copy-email="r.javkhlan@num.edu.mn"
+            >
+              <span data-copy-label>r.javkhlan@num.edu.mn</span>
+              <i>Copy</i>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__top">
+        <a class="brand brand--footer magnetic" href="#top" aria-label="Back to top">
+          <span class="brand__mark">JR<span>.</span></span>
+          <span class="brand__text">Research · Education<br />Entrepreneurship</span>
+        </a>
+        <div class="footer__links">
+          <a href="https://www.linkedin.com/in/javkhlan-rentsendorj-a6070a57/" target="_blank" rel="noopener noreferrer">LinkedIn <span>↗</span></a>
+          <a href="https://github.com/janubis" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a>
+          <a href="https://t.me/rjavkhlan" target="_blank" rel="noopener noreferrer">Telegram <span>↗</span></a>
+          <a href="contact.html">Contact card <span>→</span></a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© <span data-year>2026</span> Javkhlan Rentsendorj</p>
+        <p>Designed with curiosity in Ulaanbaatar</p>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
 </html>
