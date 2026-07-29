@@ -28,7 +28,7 @@ the repository's `main` branch.
 - Venture history covering Powered, e-Geree, Yesh, and Octagon.
 - Recognition earned by the teams behind those ventures.
 - Featured public, university, enterprise, and immersive-media work.
-- A filterable Project Atlas presenting 38 representative engagements from a
+- A filterable Project Atlas presenting 44 representative engagements from a
   wider body of 100+ projects.
 - A separate downloadable contact card and vCard.
 - A custom Open Graph image for link previews.
@@ -46,7 +46,9 @@ China–Mongolia Joint School, Uplanet Unitel, Soyombo Cinema, Sustainable Fibre
 Alliance, Beefer, Inktop.mn, Bilegt Gobi, Devshil Trade, Consul Tower, Duran
 Khar, Airwork.it, WilleyDesign.com, IFSWF, UB Info, Medimpex, iParliament,
 BizTour, Gooview.it, Ikh Ust Tuul, Suntrans Mongolia, num.edu.mn,
-site.num.edu.mn, Noyon Pizza, Premium Travel Mongolia, and Mongolian Observer.
+site.num.edu.mn, Noyon Pizza, Premium Travel Mongolia, Mongolian Observer,
+isu.edu.mn, Togloom.trade, G-Power, GUYUK Metaverse, SF Advisory, and Bavaria
+Motors.
 
 Project roles varied. Depending on the engagement, Javkhlan contributed through
 hands-on development, architecture, virtual-tour production, product strategy,
