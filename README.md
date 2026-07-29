@@ -73,13 +73,17 @@ There is no build tool or package installation step.
 .
 ├── index.html             Main portfolio
 ├── contact.html           Contact card
+├── robots.txt             Search-crawler policy and sitemap location
+├── sitemap.xml            Canonical public URLs and profile image
 ├── css/
 │   └── style.css          Layout, visual system, and animation
 ├── js/
 │   └── script.js          Canvas and interactive behavior
 └── assets/
-    ├── profile-min.jpg    Optimized profile portrait
-    ├── profile.jpg        Original profile portrait
+    ├── profile-600.webp   Small responsive portrait
+    ├── profile-1200.webp  Large responsive portrait
+    ├── profile-min.jpg    JPEG fallback portrait
+    ├── profile.jpg        High-resolution portrait
     ├── og-card.png        Social-sharing preview
     └── rjavkhlan.vcf      Downloadable contact
 ```
@@ -127,11 +131,18 @@ The site includes:
 - a no-JavaScript fallback;
 - `prefers-reduced-motion` support;
 - touch-safe behavior; and
-- a device-pixel-ratio cap on the animated canvas.
+- a device-pixel-ratio cap and off-screen pause for the animated canvas;
+- responsive WebP portraits with a JPEG fallback;
+- explicit image dimensions and priority hints for layout stability;
+- structured `ProfilePage` and `Person` data;
+- a sitemap and crawler policy; and
+- restrictive resource-loading and referrer policies suitable for static
+  GitHub Pages hosting.
 
 ## Contact
 
-- Email: [r.javkhlan@num.edu.mn](mailto:r.javkhlan@num.edu.mn)
+- Email: [r.javkhlan@gmail.com](mailto:r.javkhlan@gmail.com)
+- Phone: [+976 9907 1008](tel:+97699071008)
 - LinkedIn: [Javkhlan Rentsendorj](https://www.linkedin.com/in/javkhlan-rentsendorj-a6070a57/)
 - GitHub: [@janubis](https://github.com/janubis)
 - Telegram: [@rjavkhlan](https://t.me/rjavkhlan)

@@ -19,8 +19,8 @@
   if (reducedMotion) {
     finishLoader();
   } else {
-    window.addEventListener("load", () => window.setTimeout(finishLoader, 1150), { once: true });
-    window.setTimeout(finishLoader, 2600);
+    window.addEventListener("load", () => window.setTimeout(finishLoader, 520), { once: true });
+    window.setTimeout(finishLoader, 1400);
   }
 
   const header = document.querySelector("[data-header]");
@@ -285,6 +285,7 @@
   let dpr = 1;
   let particles = [];
   let animationFrame = 0;
+  let canvasVisible = true;
   const pointer = { x: 0, y: 0, targetX: 0, targetY: 0 };
 
   const createParticles = () => {
@@ -372,7 +373,24 @@
       }
     });
 
-    animationFrame = window.requestAnimationFrame(draw);
+    if (canvasVisible && !document.hidden) {
+      animationFrame = window.requestAnimationFrame(draw);
+    } else {
+      animationFrame = 0;
+    }
+  };
+
+  const startCanvasAnimation = () => {
+    if (!animationFrame && canvasVisible && !document.hidden) {
+      animationFrame = window.requestAnimationFrame(draw);
+    }
+  };
+
+  const stopCanvasAnimation = () => {
+    if (animationFrame) {
+      window.cancelAnimationFrame(animationFrame);
+      animationFrame = 0;
+    }
   };
 
   window.addEventListener("resize", resizeCanvas, { passive: true });
@@ -387,12 +405,27 @@
 
   document.addEventListener("visibilitychange", () => {
     if (document.hidden) {
-      window.cancelAnimationFrame(animationFrame);
+      stopCanvasAnimation();
     } else {
-      animationFrame = window.requestAnimationFrame(draw);
+      startCanvasAnimation();
     }
   });
 
+  if ("IntersectionObserver" in window) {
+    const canvasObserver = new IntersectionObserver(
+      ([entry]) => {
+        canvasVisible = entry.isIntersecting;
+        if (canvasVisible) {
+          startCanvasAnimation();
+        } else {
+          stopCanvasAnimation();
+        }
+      },
+      { rootMargin: "120px 0px" },
+    );
+    canvasObserver.observe(canvas);
+  }
+
   resizeCanvas();
-  animationFrame = window.requestAnimationFrame(draw);
+  startCanvasAnimation();
 })();

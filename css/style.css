@@ -73,6 +73,17 @@ img {
   max-width: 100%;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 h1,
 h2,
 h3,
@@ -156,7 +167,7 @@ ul {
   height: 100%;
   background: var(--cyan);
   transform: translateX(-100%);
-  animation: loader-track 1s var(--ease-in-out) forwards;
+  animation: loader-track 0.45s var(--ease-in-out) forwards;
 }
 
 .loader p {
@@ -688,6 +699,12 @@ body.cursor-active .cursor-ring {
   position: relative;
   aspect-ratio: 0.76;
   overflow: hidden;
+}
+
+.portrait-card__image picture {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .portrait-card__image img {
@@ -2217,6 +2234,7 @@ body.cursor-active .cursor-ring {
   font-family: var(--display);
   font-size: 0.7rem;
   letter-spacing: 0.03em;
+  text-decoration: none;
   transition:
     background 0.3s ease,
     color 0.3s ease;

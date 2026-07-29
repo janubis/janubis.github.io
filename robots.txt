@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://janubis.github.io/sitemap.xml
