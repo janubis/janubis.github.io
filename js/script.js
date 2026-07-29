@@ -238,6 +238,43 @@
   const year = document.querySelector("[data-year]");
   if (year) year.textContent = new Date().getFullYear().toString();
 
+  const projectFilters = [...document.querySelectorAll("[data-project-filter]")];
+  const projectCards = [...document.querySelectorAll("[data-project-category]")];
+  const projectCount = document.querySelector("[data-project-count]");
+
+  projectFilters.forEach((filterButton) => {
+    filterButton.addEventListener("click", () => {
+      const category = filterButton.dataset.projectFilter;
+
+      projectFilters.forEach((button) => {
+        button.setAttribute("aria-pressed", String(button === filterButton));
+      });
+
+      let visibleCount = 0;
+
+      projectCards.forEach((card) => {
+        const categories = card.dataset.projectCategory.split(/\s+/);
+        const matches = category === "all" || categories.includes(category);
+
+        card.classList.toggle("is-filtered-out", !matches);
+
+        if (matches) {
+          card.removeAttribute("aria-hidden");
+          visibleCount += 1;
+        } else {
+          card.setAttribute("aria-hidden", "true");
+        }
+      });
+
+      if (projectCount) {
+        projectCount.textContent =
+          category === "all"
+            ? `Showing ${visibleCount} projects`
+            : `${visibleCount} projects in this view`;
+      }
+    });
+  });
+
   const canvas = document.querySelector("#hero-canvas");
   const context = canvas?.getContext("2d", { alpha: true });
 
