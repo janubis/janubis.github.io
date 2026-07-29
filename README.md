@@ -73,6 +73,8 @@ There is no build tool or package installation step.
 .
 ├── index.html             Main portfolio
 ├── contact.html           Contact card
+├── favicon.ico            Multi-size browser favicon
+├── site.webmanifest       Installable-site metadata and icons
 ├── robots.txt             Search-crawler policy and sitemap location
 ├── sitemap.xml            Canonical public URLs and profile image
 ├── css/
@@ -84,6 +86,10 @@ There is no build tool or package installation step.
     ├── profile-1200.webp  Large responsive portrait
     ├── profile-min.jpg    JPEG fallback portrait
     ├── profile.jpg        High-resolution portrait
+    ├── favicon-32.png     PNG browser favicon
+    ├── apple-touch-icon.png  iOS home-screen icon
+    ├── icon-192.png       Small installable-site icon
+    ├── icon-512.png       Large installable-site icon
     ├── og-card.png        Social-sharing preview
     └── rjavkhlan.vcf      Downloadable contact
 ```
