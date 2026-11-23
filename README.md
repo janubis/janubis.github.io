@@ -23,8 +23,10 @@ the repository's `main` branch.
 
 - A cinematic, responsive portfolio with an interactive canvas background.
 - Profile and career metrics, including the 2009 start of Javkhlan's IT career.
-- Current PhD research: Distortion-Aware Projection and Viewport Selection
-  (DAPVS) for interactive gigapixel 360° imagery.
+- Current PhD research in browser-based gigapixel delivery, decoded-tile cache
+  behavior, and webcam-controlled 360° navigation with verifiable tile delivery.
+- Two latest-research cards linked to the public Ocurus research platforms,
+  including the November 2026 browser cohort update.
 - Venture history covering Powered, e-Geree, Yesh, and Octagon.
 - Recognition earned by the teams behind those ventures.
 - Featured public, university, enterprise, and immersive-media work.
